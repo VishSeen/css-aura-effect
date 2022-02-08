@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+}
+.banner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.banner .aura-container {
+  width: 50%;
+  height: 50%;
+  filter: blur(25px);
+  overflow: hidden;
+  opacity: 0.3;
+}
+.banner .aura-container .circle {
+  height: 900px;
+  position: absolute;
+}
+.banner .aura-container .circle.left {
+  top: 50%;
+  left: 5%;
+  width: 80%;
+  border-radius: 55%;
+  background: linear-gradient(to left, rgba(255, 255, 0, 0.856), rgba(255, 0, 0, 0.801), rgba(255, 196, 0, 0.877));
+  animation: 8s scale ease-in-out forwards, 50s rotate ease forwards;
+}
+.banner .aura-container .circle.right {
+  top: 60%;
+  right: -30%;
+  width: 80%;
+  border-radius: 35%;
+  background: linear-gradient(to right, rgba(255, 251, 0, 0.836), rgba(255, 0, 0, 0.774), rgba(0, 102, 255, 0.774));
+  animation: 18s scale ease-in-out infinite, 75s rotate linear forwards;
+  animation-delay: 250ms;
+  z-index: 2;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
